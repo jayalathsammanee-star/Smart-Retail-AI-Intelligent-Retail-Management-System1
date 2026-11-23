@@ -174,9 +174,9 @@ For a production deployment, configure a persistent database, secure secrets, ba
 
 
 ```markdown
-![Dashboard](screenshots/dashboard.png)
-![Inventory Management](screenshots/inventory.png)
-![ML Studio](screenshots/ml-studio.png)
+![Dashboard](screenshots/image2.jpeg)
+![Inventory Management](screenshots/image3.jpeg)
+![ML Studio](screenshots/image5.jpeg)
 ```
 
 
