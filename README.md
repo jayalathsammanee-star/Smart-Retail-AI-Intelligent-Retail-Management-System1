@@ -37,8 +37,6 @@ The application provides data-driven analysis through custom TypeScript algorith
 - **Customer segmentation:** groups customers using recency, frequency, and monetary (RFM) features.
 - **Market basket analysis:** identifies products that are commonly purchased together and reports association measures such as support, confidence, and lift.
 
-> Note: These analytics are implemented in the project's TypeScript code. Although the package includes the Google GenAI SDK and the environment example mentions `GEMINI_API_KEY`, the inspected application code does not currently call the Gemini API. The ML features should therefore be described as custom algorithmic analytics, not as Gemini-powered features.
-
 ### 6. Business Intelligence
 - KPI summaries
 - Revenue trends
@@ -173,9 +171,6 @@ The backend also contains a MySQL schema definition in `server/mysqlSchema.ts`, 
 
 For a production deployment, configure a persistent database, secure secrets, backups, and suitable authentication/session management before using real business data.
 
-## Environment Variables
-
-The repository includes an `.env.example` file with `GEMINI_API_KEY` and `APP_URL` placeholders. These are not required for the current custom TypeScript analytics implementation. Do not commit real API keys, passwords, or other secrets to GitHub.
 
 ## Screenshots
 
