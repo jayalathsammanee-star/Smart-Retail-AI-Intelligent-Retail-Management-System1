@@ -99,11 +99,9 @@ smart-retail-ai/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/smart-retail-ai.git
+git clone https://github.com/jayalathsammanee-star/smart-retail-ai.git
 cd smart-retail-ai
 ```
-
-Replace `YOUR_USERNAME` with your GitHub username and update the repository URL if your repository has a different name.
 
 ### 2. Install dependencies
 
@@ -174,7 +172,6 @@ For a production deployment, configure a persistent database, secure secrets, ba
 
 ## Screenshots
 
-Add screenshots of the application here to showcase the dashboard, POS, inventory management, BI analytics, and ML Studio.
 
 ```markdown
 ![Dashboard](screenshots/dashboard.png)
@@ -182,7 +179,7 @@ Add screenshots of the application here to showcase the dashboard, POS, inventor
 ![ML Studio](screenshots/ml-studio.png)
 ```
 
-Make sure the screenshot files exist in a `screenshots/` folder and update the filenames to match your images.
+
 
 ## Future Improvements
 
