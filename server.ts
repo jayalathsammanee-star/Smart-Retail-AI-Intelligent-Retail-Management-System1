@@ -191,6 +191,17 @@ async function createServer() {
 
   // First-Run Admin Claim (locks automatically once first Admin is created)
   app.post('/api/auth/claim-admin', (req, res) => {
+    const setupKey = String(req.body?.setupKey ?? '');
+
+if (
+  !process.env.ADMIN_SETUP_KEY ||
+  setupKey !== process.env.ADMIN_SETUP_KEY
+) {
+  res.status(403).json({
+    error: 'Invalid administrator setup key.'
+  });
+  return;
+}
     const snap = store.getSnapshot();
     if (snap.users.some((u) => u.role === 'admin')) {
       res.status(403).json({ error: 'Admin account already claimed. Please sign in.' });
@@ -252,8 +263,7 @@ async function createServer() {
       return;
     }
 
-    const hasAdmin = snap.users.some((u) => u.role === 'admin');
-    const role: RoleName = !hasAdmin ? 'admin' : 'staff';
+    const role: RoleName = 'staff';
     const { hash, salt } = hashPassword(password);
 
     const newUser: User = {
@@ -262,10 +272,10 @@ async function createServer() {
       email,
       passwordHash: hash,
       passwordSalt: salt,
-      roleId: role === 'admin' ? 1 : 2,
+      roleId: 2,
       role,
       branch,
-      avatarUrl: role === 'admin' ? '/src/assets/images/avatar_admin_manager_1795372833714.jpg' : undefined,
+      avatarUrl: undefined,
       createdAt: new Date().toISOString(),
     };
 

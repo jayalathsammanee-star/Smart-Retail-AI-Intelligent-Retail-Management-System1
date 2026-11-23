@@ -26,6 +26,7 @@ export const AuthView: React.FC<AuthViewProps> = ({
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [setupKey, setSetupKey] = useState('');
   const [branch, setBranch] = useState(branches[0] || 'Flagship Downtown');
   const [resetCode, setResetCode] = useState('');
   const [previewResetCode, setPreviewResetCode] = useState<string | null>(null);
@@ -44,7 +45,13 @@ export const AuthView: React.FC<AuthViewProps> = ({
       if (mode === 'claim') {
         const res = await apiRequest<{ token: string; user: PublicUser }>('/api/auth/claim-admin', {
           method: 'POST',
-          body: JSON.stringify({ name, email, password, branch }),
+          body: JSON.stringify({
+  name,
+  email,
+  password,
+  branch,
+  setupKey,
+}),
         });
         setAuthToken(res.token);
         onAuthenticated(res.user);
