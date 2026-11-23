@@ -1,0 +1,6 @@
+{
+  "name": "Smart Retail AI",
+  "description": "Intelligent Retail Management System with AI Sales Forecasting, ML Inventory Optimization, POS Barcode Scanning, and Business Intelligence.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
