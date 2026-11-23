@@ -196,10 +196,13 @@ Make sure the screenshot files exist in a `screenshots/` folder and update the f
 - Add automated tests and API documentation.
 - Add deployment configuration and production security hardening.
 
-## Author
+👩‍💻 Developer
+Sammani Jayalath
 
-**Sammani Jayalath**
+BSc (Hons) Computer Science Undergraduate
 
-## License
+GitHub: https://github.com/jayalathsammanee-star
+
+
 
 
