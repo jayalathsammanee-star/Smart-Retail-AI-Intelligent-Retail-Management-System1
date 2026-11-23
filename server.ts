@@ -15,7 +15,7 @@ import type { PublicUser, RoleName, User } from './server/types';
 
 dotenv.config();
 
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const JWT_SECRET = process.env.JWT_SECRET || crypto.randomBytes(32).toString('hex');
 const TOKEN_TTL_MS = 12 * 60 * 60 * 1000;
 
