@@ -169,18 +169,6 @@ The backend also contains a MySQL schema definition in `server/mysqlSchema.ts`, 
 
 For a production deployment, configure a persistent database, secure secrets, backups, and suitable authentication/session management before using real business data.
 
-
-## Screenshots
-
-
-```markdown
-![Dashboard](screenshots/image2.jpeg)
-![Inventory Management](screenshots/image3.jpeg)
-![ML Studio](screenshots/image5.jpeg)
-```
-
-
-
 ## Future Improvements
 
 - Connect the application to a production-ready MySQL database.
